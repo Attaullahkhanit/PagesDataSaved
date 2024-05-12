@@ -1,0 +1,7 @@
+@import "/src/styles/mixins.scss";
+
+.top-nav {
+    @include flex(row, start, center, 3.125rem);
+    width: 100%;
+    background-color: yellow;
+}

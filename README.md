@@ -1,37 +1,70 @@
-PagesDataSaved
-Overview
-PagesDataSaved is a React.js application utilizing Redux Toolkit and Ant Design for managing and saving data across multiple tabs.
+# Getting Started with Create React App
 
-Functionality
-The application consists of a parent component containing four different tabs, each with its own child component representing a form. The parent component also includes a footer with 'Save' and 'Close' buttons.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Components
-Parent Component: This is the main component of the application. It contains the tabs and manages the state of the data across them.
+## Available Scripts
 
-Tab Components: Each tab is represented by a child component. These components contain forms for collecting and editing data.
+In the project directory, you can run:
 
-Data Management
-Redux Toolkit: Redux Toolkit is used for state management. The parent component dispatches actions to update the Redux store when data changes within the child components.
-Reducers: Redux reducers handle state updates based on dispatched actions.
-Actions: Actions trigger state updates by dispatching payloads to reducers.
-Selectors: Selectors are used to retrieve specific pieces of data from the Redux store.
-Save Functionality
-When changes are made within any of the child components (tabs), the updated data is dispatched to the Redux store.
-The 'Save' button in the parent component triggers a save action, which collects all updated data from the Redux store and sends it to the server or performs any necessary data-saving operations.
-Dependencies
-React.js
-Redux Toolkit
-Ant Design
-Installation
-Clone the repository: git clone https://github.com/Attaullahkhanit/PagesDataSaved
-Navigate to the project directory: cd PagesDataSaved
-Install dependencies: npm install
-Usage
-Start the development server: npm start
-Access the application in your web browser at http://localhost:3000
-Contributions
-Contributions are welcome! Feel free to fork the repository and submit pull requests with any improvements or additional features.
+### `npm start`
 
-License
-This project is licensed under the MIT License.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
