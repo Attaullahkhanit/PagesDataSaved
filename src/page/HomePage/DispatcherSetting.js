@@ -4,14 +4,15 @@ import OperationComponent from '../../components/Common/DispatcherSetting/Operat
 import PreferenceComponent from '../../components/Common/DispatcherSetting/PreferenceComponent/PreferenceComponent';
 import DriversComponent from '../../components/Common/DispatcherSetting/Drivers/DriversComponent';
 import BreaksComponent from '../../components/Common/DispatcherSetting/Breaks/BreaksComponent';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateBreaks, updateDrivers, updateOperation, updatePreference } from '../../redux/slice/dispatcherSettingsSlice';
 
 const { TabPane } = Tabs;
 
 const DispatcherSetting = () => {
   const dispatch = useDispatch();
-
+  const getData = useSelector(state => state);
+  console.log(getData, 'getAllData')
   const [operationData, setOperationData] = useState({});
   const [preferenceData, setPreferenceData] = useState({});
   const [driversData, setDriversData] = useState({});
