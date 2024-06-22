@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { Form, Checkbox } from 'antd';
 
 const PreferenceComponent = ({ onSave }) => {
-  const [wantPreference, setWantPreference] = useState(false);
-  const [topPreference, setTopPreference] = useState(false);
+const [wantPreference, setWantPreference] = useState(false);
+const [topPreference, setTopPreference] = useState(false);
 
-  const handleWantPreferenceChange = (checked) => {
-    setWantPreference(checked);
-    onSave({ wantPreference: checked, topPreference });
-  };
+const handleWantPreferenceChange = (checked) => {
+  setWantPreference(checked);
+  onSave({ wantPreference: checked, topPreference });
+};
 
-  const handleTopPreferenceChange = (checked) => {
-    setTopPreference(checked);
-    onSave({ wantPreference, topPreference: checked });
-  };
+const handleTopPreferenceChange = (checked) => {
+  setTopPreference(checked);
+  onSave({ wantPreference, topPreference: checked });
+};
 
   return (
     <Form layout="vertical">

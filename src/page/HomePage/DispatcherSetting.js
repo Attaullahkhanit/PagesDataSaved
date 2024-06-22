@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Button } from 'antd';
+import { Tabs, Button, Divider } from 'antd';
 import OperationComponent from '../../components/Common/DispatcherSetting/OperationComp.js/OperationComponent';
 import PreferenceComponent from '../../components/Common/DispatcherSetting/PreferenceComponent/PreferenceComponent';
 import DriversComponent from '../../components/Common/DispatcherSetting/Drivers/DriversComponent';
@@ -30,8 +30,8 @@ const DispatcherSetting = () => {
   }
 
   return (
-    <div style={{ padding: '0 20px' }}>
-      <Tabs defaultActiveKey="1" onChange={callback}>
+    <div style={{ padding: '0 0px', borderRadius: '5px', border: '1px solid #ccc', marginLeft: 'auto', marginRight: 'auto', marginTop: '50px', width: '70%' }}>
+      <Tabs defaultActiveKey="1" onChange={callback} style={{marginLeft: '20px', marginRight: '20px'}}>
         <TabPane tab="Operation" key="1" style={{ padding: '20px' }}>
           <OperationComponent onSave={setOperationData}/>
         </TabPane>
@@ -45,7 +45,8 @@ const DispatcherSetting = () => {
           <BreaksComponent onSave={setBreaksData}/>
         </TabPane>
       </Tabs>
-      <div style={{ textAlign: 'right', marginTop: '20px' }}>
+      <Divider />
+      <div style={{ textAlign: 'right', margin: '20px' }}>
         <Button type="primary" style={{ marginRight: '10px' }} onClick={handleSave}>Save</Button>
         <Button>Close</Button>
       </div>

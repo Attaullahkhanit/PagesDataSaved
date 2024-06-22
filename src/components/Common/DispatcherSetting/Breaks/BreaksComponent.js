@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Input, Checkbox } from 'antd';
+import { Form, Select, Checkbox } from 'antd';
+
+const { Option } = Select;
 
 const BreaksComponent = ({ onSave }) => {
   const [weight, setWeight] = useState('');
@@ -18,15 +20,22 @@ const BreaksComponent = ({ onSave }) => {
   return (
     <Form layout="vertical">
       <Form.Item label="How many weight in kg">
-      <Input
+        <Select
           value={weight}
-          placeholder="Enter weight"
-          addonAfter="kg"
-          onChange={(e) => handleWeightChange(e.target.value)}
-        />
+          placeholder="Select weight"
+          onChange={handleWeightChange}
+        >
+          {[...Array(10).keys()].map(num => (
+            <Option key={num + 1} value={String(num + 1)}>
+              {num + 1} kg
+            </Option>
+          ))}
+        </Select>
       </Form.Item>
       <Form.Item label="Do you have breaks?">
-        <Checkbox checked={hasBreaks} onChange={(e) => handleHasBreaksChange(e.target.checked)}>Yes, I have breaks</Checkbox>
+        <Checkbox checked={hasBreaks} onChange={(e) => handleHasBreaksChange(e.target.checked)}>
+          Yes, I have breaks
+        </Checkbox>
       </Form.Item>
     </Form>
   );
