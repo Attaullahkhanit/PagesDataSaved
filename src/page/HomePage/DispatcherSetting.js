@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Button, Divider } from 'antd';
+import { Tabs, Button, Divider, message } from 'antd';
 import OperationComponent from '../../components/Common/DispatcherSetting/OperationComp.js/OperationComponent';
 import PreferenceComponent from '../../components/Common/DispatcherSetting/PreferenceComponent/PreferenceComponent';
 import DriversComponent from '../../components/Common/DispatcherSetting/Drivers/DriversComponent';
@@ -19,11 +19,23 @@ const DispatcherSetting = () => {
   const [breaksData, setBreaksData] = useState({});
 
   const handleSave = () => {
-    dispatch(updateOperation(operationData))
-    dispatch(updatePreference(preferenceData))
-    dispatch(updateDrivers(driversData))
-    dispatch(updateBreaks(breaksData))
-  }
+    const updateOperationsPromise = dispatch(updateOperation(operationData));
+    const updatePreferencePromise = dispatch(updatePreference(preferenceData));
+    const updateDriversPromise = dispatch(updateDrivers(driversData));
+    const updateBreaksPromise = dispatch(updateBreaks(breaksData));
+
+    Promise.all([
+        updateOperationsPromise,
+        updatePreferencePromise,
+        updateDriversPromise,
+        updateBreaksPromise,
+    ]).then(() => {
+        message.success('Data successfully saved');
+    }).catch((error) => {
+        message.error('Failed to save data');
+        console.error('Error saving data:', error);
+    });
+};
 
   function callback(key) {
     console.log(key);
