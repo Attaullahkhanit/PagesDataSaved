@@ -21,7 +21,7 @@ const OperationComponent = ({onSave}) => {
     onSave({ labelDesired, operateBusiness, selectedOption: value });
   };
   return (
-    <Form layout="vertical">
+    <Form layout="vertical" style={{height: '220px'}}>
       <Form.Item label="Label Desired">
         <Checkbox checked={labelDesired} onChange={e => handleLabelDesiredChange(e.target.checked)}>Yes, I Desired</Checkbox>
       </Form.Item>

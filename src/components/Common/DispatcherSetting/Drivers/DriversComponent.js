@@ -16,7 +16,7 @@ const DriversComponent = ({ onSave }) => {
   };
 
   return (
-    <Form layout="vertical">
+    <Form layout="vertical" style={{height: '220px'}}>
       <Form.Item label="Driver Name">
         <Input placeholder="Enter driver name" onChange={(e) => handleDriverNameChange(e.target.value)} />
       </Form.Item>

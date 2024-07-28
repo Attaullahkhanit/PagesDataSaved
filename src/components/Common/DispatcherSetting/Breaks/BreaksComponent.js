@@ -18,7 +18,7 @@ const BreaksComponent = ({ onSave }) => {
   };
 
   return (
-    <Form layout="vertical">
+    <Form layout="vertical" style={{height: '220px'}}>
       <Form.Item label="How many weight in kg">
         <Select
           value={weight}

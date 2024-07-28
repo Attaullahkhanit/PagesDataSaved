@@ -16,7 +16,7 @@ const handleTopPreferenceChange = (checked) => {
 };
 
   return (
-    <Form layout="vertical">
+    <Form layout="vertical" style={{height: '220px'}}>
       <Form.Item label="Do you want preference of business?">
         <Checkbox checked={wantPreference} onChange={(e) => handleWantPreferenceChange(e.target.checked)}>Yes, I want preference of business</Checkbox>
       </Form.Item>
